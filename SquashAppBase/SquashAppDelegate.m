@@ -13,6 +13,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"Ladder" forKey:@"lastView"];
+
+    
+    NSString* appIDString = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"parseA"];
+    NSString* clientKey = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"parseClientID"];
+    
+    [Parse setApplicationId:appIDString
+                  clientKey:clientKey];
+    
     return YES;
 }
 							

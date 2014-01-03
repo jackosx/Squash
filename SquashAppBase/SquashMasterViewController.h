@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWRevealViewController.h"
+#import "SquashDetailViewController.h"
 
 @interface SquashMasterViewController : UITableViewController
+
+
+
+@property (strong, nonatomic) SquashDetailViewController *detailViewController;
 
 @end
